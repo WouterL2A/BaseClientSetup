@@ -1,0 +1,63 @@
+ion-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  ion-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    ion-toolbar {
+      --background: #3880ff;
+      --color: white;
+      z-index: 1000;
+
+      ion-menu-button {
+        display: block; /* Ensure it is visible */
+      }
+    }
+  }
+
+  ion-split-pane {
+    margin-top: 2px; /* Adjust for header height */
+    height: calc(100vh - 2px); /* Ensure it doesn't overlap with the header */
+    display: flex;
+
+    ion-menu {
+      margin-top: 56px; /* Ensure content starts below the header */
+      --background: #f8f9fa;
+      height: calc(100vh - 56px); /* Full height within split-pane minus header */
+      flex: 1;
+      app-menu {
+        height: 100%;
+        ion-content {
+          --background: #f8f9fa;
+          height: 100%; /* Full height for the menu content */
+          padding: 0;
+
+          ion-list {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  ion-router-outlet {
+    margin-top: 56px; /* Ensure content starts below the header */
+    flex: 1;
+  }
+
+  ion-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}

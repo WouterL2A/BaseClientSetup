@@ -1,0 +1,124 @@
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+
+app-header, app-menu, app-footer, ion-router-outlet {
+  display: block !important;
+  background-color: #f0f0f0 !important; /* Add background for visibility */
+  color: #000 !important; /* Ensure text is visible */
+  min-height: 50px !important; /* Prevent elements from collapsing */
+}
+/* Add your custom global styles below */
+
+/* Central Stylesheet: styles.scss */
+
+/* Global body and app container styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+ion-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  ion-header {
+    flex: 0 0 auto;
+  }
+
+  ion-router-outlet {
+    flex: 1 0 auto;
+  }
+
+  ion-footer {
+    flex: 0 0 auto;
+    margin-top: auto;
+  }
+}
+
+/* General styles */
+ion-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ion-button {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+/* Menu styles */
+ion-menu {
+  --background: #f8f9fa;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+ion-list {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+ion-item {
+  padding: 10px 15px;
+  font-size: 16px;
+  --color: #222;
+}
+
+ion-item:hover {
+  --background: #e0e0e0;
+}
+
+/* Header styles */
+ion-toolbar {
+  --background: #3880ff;
+  --color: #fff;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Footer styles */
+ion-footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Home page content styles */
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}

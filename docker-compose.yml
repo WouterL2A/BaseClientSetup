@@ -1,0 +1,13 @@
+services:
+  angular:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "8100:8100"  # Ionic server port
+      - "4200:4200"  # Angular development server
+      - "35729:35729"  # Live reload
+    stdin_open: true
+    tty: true

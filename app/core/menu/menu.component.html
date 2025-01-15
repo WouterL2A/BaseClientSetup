@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of menuItems" [routerLink]="item.url">
+      {{ item.title }}
+    </ion-item>
+    <ion-item routerLink="/home">Home</ion-item>
+    <ion-item routerLink="/profile">Profile</ion-item>
+    <ion-item routerLink="/settings">Settings</ion-item>
+  </ion-list>
+</ion-content>

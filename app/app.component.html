@@ -1,0 +1,36 @@
+<!--
+<ion-app>
+  <ion-header>
+    <app-header></app-header>
+  </ion-header>
+
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" side="start" menu-type="overlay" menu-enabled="true">
+      <app-menu></app-menu>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+
+  <ion-footer>
+    <app-footer></app-footer>
+  </ion-footer>
+</ion-app>
+-->
+<ion-app>
+  <ion-header>
+    <app-header></app-header>
+  </ion-header>
+
+  <ion-split-pane contentId="main-content" when="(min-width: 768px)">
+    <ion-menu contentId="main-content" side="start">
+      <app-menu></app-menu>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+
+  <ion-footer>
+    <app-footer></app-footer>
+  </ion-footer>
+</ion-app>
+

@@ -1,0 +1,56 @@
+ion-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  ion-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  ion-split-pane {
+    margin-top: 56px; /* Adjust for header height */
+    height: calc(100vh - 56px); /* Ensure it doesn't overlap with header */
+  }
+
+  ion-menu {
+    --background: #f8f9fa;
+    height: 100%; /* Full height of the split-pane content */
+    top: 0; /* Remove manual offset; split-pane handles alignment */
+
+    ion-content {
+      --background: #f8f9fa;
+      height: 100%; /* Full height within the menu */
+    }
+
+    ion-list {
+      margin-top: 0;
+      padding: 0;
+    }
+    
+  }
+
+  ion-router-outlet {
+    margin-top: 0; /* No need for manual offset; split-pane manages this */
+    flex: 1;
+    height: 100%;
+  }
+
+  ion-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  ion-toolbar {
+    --background: #3880ff;
+    --color: white;
+    z-index: 1000;
+  }
+}
